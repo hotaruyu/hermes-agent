@@ -62,8 +62,8 @@ Rules:
 --- SOURCE MATERIAL END ---
 """
 
-    # Hermes CLI accepts a one-shot prompt as a positional argument.
-    result = run(["hermes", prompt])
+    # Official scripted one-shot entry point: final response only on stdout.
+    result = run(["hermes", "-z", prompt])
     return result
 
 
