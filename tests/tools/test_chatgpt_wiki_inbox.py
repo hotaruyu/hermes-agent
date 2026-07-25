@@ -32,7 +32,6 @@ def test_resolve_skills_prefers_available_karpathywiki_skill(monkeypatch):
     assert mod.resolve_skills() == ["karpathywiki-ingestion", "obsidian-llm-wiki"]
 
 
-
 def test_ensure_repo_supports_issues_raises_when_disabled(monkeypatch):
     mod = load_module()
     monkeypatch.setattr(
@@ -44,6 +43,43 @@ def test_ensure_repo_supports_issues_raises_when_disabled(monkeypatch):
     with pytest.raises(SystemExit, match="Issues are disabled.*enable-issues"):
         mod.ensure_repo_supports_issues("hotaruyu/hermes-agent")
 
+
+def test_list_inbox_issues_only_returns_authorized_author(monkeypatch):
+    mod = load_module()
+    monkeypatch.setattr(
+        mod,
+        "run",
+        lambda cmd, **kwargs: json.dumps(
+            [
+                {
+                    "number": 1,
+                    "title": "[WIKI-INBOX] owned",
+                    "body": "owned body",
+                    "url": "https://example.com/1",
+                    "author": {"login": "hotaruyu"},
+                },
+                {
+                    "number": 2,
+                    "title": "[WIKI-INBOX] foreign",
+                    "body": "foreign body",
+                    "url": "https://example.com/2",
+                    "author": {"login": "someone-else"},
+                },
+            ]
+        ),
+    )
+
+    issues = mod.list_inbox_issues("hotaruyu/hermes-agent", 20)
+
+    assert issues == [
+        {
+            "number": 1,
+            "title": "[WIKI-INBOX] owned",
+            "body": "owned body",
+            "url": "https://example.com/1",
+            "author": {"login": "hotaruyu"},
+        }
+    ]
 
 
 def test_ingest_uses_wiki_root_as_cwd_and_passes_skills(monkeypatch, tmp_path: Path):
@@ -73,7 +109,6 @@ def test_ingest_uses_wiki_root_as_cwd_and_passes_skills(monkeypatch, tmp_path: P
     assert cmd[:3] == ["hermes", "--skills", "karpathywiki-ingestion,obsidian-llm-wiki"]
     assert cmd[3] == "-z"
     assert cwd == str(tmp_path)
-
 
 
 def test_main_dry_run_prints_matching_issues_json(monkeypatch, capsys, tmp_path: Path):

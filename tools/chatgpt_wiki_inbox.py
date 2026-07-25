@@ -29,6 +29,7 @@ from pathlib import Path
 PREFIX = "[WIKI-INBOX]"
 DEFAULT_REPO = os.environ.get("GITHUB_REPOSITORY", "hotaruyu/hermes-agent")
 DEFAULT_WIKI_ROOT = os.environ.get("KARPATHYWIKI_ROOT") or os.environ.get("KARPATHY_WIKI_ROOT")
+AUTHORIZED_AUTHOR_LOGIN = "hotaruyu"
 SKILL_CANDIDATES = [
     "karpathywiki-ingestion",
     "obsidian-llm-wiki",
@@ -141,10 +142,15 @@ def list_inbox_issues(repo: str, limit: int) -> list[dict]:
             "--limit",
             str(limit),
             "--json",
-            "number,title,body,url",
+            "number,title,body,url,author",
         ]
     )
-    return json.loads(raw or "[]")
+    issues = json.loads(raw or "[]")
+    return [
+        issue
+        for issue in issues
+        if (issue.get("author") or {}).get("login") == AUTHORIZED_AUTHOR_LOGIN
+    ]
 
 
 def ingest(issue: dict, *, repo: str, wiki_root: Path, skills: list[str]) -> str:

@@ -7,6 +7,8 @@ ChatGPT PlusからKarpathyWikiへ知識を渡すための軽量ブリッジで�
 1. ChatGPTがこのリポジトリに `[WIKI-INBOX]` で始まるIssueを作る。
 2. Hermesを動かしているPCで `tools/chatgpt_wiki_inbox.py` を実行する。
 3. スクリプトが未処理Issueを取得する。
+   - ただし、**Issue作成者が `hotaruyu` 本人のものだけ**を処理する。
+   - 第三者が作成した `[WIKI-INBOX]` Issueは無視する。
 4. HermesのKarpathyWiki系skillへ内容を渡す。
 5. Hermesが既存Wikiを検索し、重複を避けてKarpathyWikiへ統合する。
 6. 成功後、Issueへ結果をコメントしてIssueを閉じる。
