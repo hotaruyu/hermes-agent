@@ -1,17 +1,23 @@
 ---
-type: topic
-title: Hermes
-description: HermesのKANBANリサーチ、GitHub Issue受け渡し、KarpathyWiki取り込み、自動化運用を整理する。
+type: index
+title: "hermes topic index"
+description: "hermes 配下に整理したKarpathyWikiノート一覧。"
 status: active
 created: 2026-07-27
 updated: 2026-07-27
 tags:
+  - index
   - hermes
-  - kanban
-  - automation
+  - karpathywiki
 source: karpathywiki
 ---
 
-# Hermes
+# hermes
 
-KANBANリサーチ、GitHub Issue経由の受け渡し、KarpathyWikiへの知識取り込み、自動化運用を整理する。
+- [KarpathyWiki Knowledge Index](../../index.md)
+
+- [Andrej Karpathy](entities/Andrej Karpathy.md)
+- [Antigravityによる昭和AI・Google Vidsナレーション制作自動化](Antigravityによる昭和AI・Google Vidsナレーション制作自動化.md)
+- [GitHub Issue経由のKarpathyWiki取り込み](GitHub Issue経由のKarpathyWiki取り込み.md)
+- [LLM Wiki](LLM Wiki.md)
+- [RAGとの違い](RAGとの違い.md)
