@@ -1,15 +1,22 @@
 ---
-type: topic
-title: AIリサーチ
-description: AIに関する論文、政策、トレンド、事例、海外動向など再利用可能な調査知識を整理する。
+type: index
+title: "ai-research topic index"
+description: "ai-research 配下に整理したKarpathyWikiノート一覧。"
 status: active
 created: 2026-07-27
 updated: 2026-07-27
 tags:
+  - index
   - ai-research
+  - karpathywiki
 source: karpathywiki
 ---
 
-# AIリサーチ
+# ai-research
 
-KANBAN等で得た調査結果をそのまま蓄積せず、再利用価値のある要点・出典・論点に整理して保存する。
+- [KarpathyWiki Knowledge Index](../../index.md)
+
+- [AI YouTubeトレンド（グローバル・2026-07）](AI YouTubeトレンド（グローバル・2026-07）.md)
+- [AI YouTubeトレンド（中国語圏・2026-07）](AI YouTubeトレンド（中国語圏・2026-07）.md)
+- [AI YouTubeトレンド（日米・2026-07）](AI YouTubeトレンド（日米・2026-07）.md)
+- [AIを用途で選ぶ時代](AIを用途で選ぶ時代.md)

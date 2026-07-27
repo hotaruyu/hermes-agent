@@ -1,16 +1,19 @@
 ---
-type: topic
-title: AntiGravity
-description: AntiGravityを使った複数エージェント運用、昭和AI制作、Google Vids自動化の設計と検証を整理する。
+type: index
+title: "antigravity topic index"
+description: "antigravity 配下に整理したKarpathyWikiノート一覧。"
 status: active
 created: 2026-07-27
 updated: 2026-07-27
 tags:
+  - index
   - antigravity
-  - agents
+  - karpathywiki
 source: karpathywiki
 ---
 
-# AntiGravity
+# antigravity
 
-複数エージェントを使った制作・検証・自動化の設計知識を整理する。
+- [KarpathyWiki Knowledge Index](../../index.md)
+
+- [昭和AI チャンネル運用ルール](昭和AI チャンネル運用ルール.md)
