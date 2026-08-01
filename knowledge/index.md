@@ -4,7 +4,7 @@ title: "KarpathyWiki Knowledge Index"
 description: "旧KarpathyWikiをOKF準拠で再編したGitHub正本インデックス。"
 status: active
 created: 2026-07-27
-updated: 2026-07-27
+updated: 2026-08-02
 tags:
   - index
   - karpathywiki
@@ -73,6 +73,7 @@ source: karpathywiki
 - [2026-07-25 japan youtube ai trend research](sources/2026-07-25_japan-youtube-ai-trend-research.md)
 - [2026-07-25 us youtube ai trend research](sources/2026-07-25_us-youtube-ai-trend-research.md)
 - [2026-07-27 showa ai us china 50s 60s research](sources/2026-07-27_showa-ai-us-china-50s-60s-research.md)
+- [#05](sources/2026-08-02_05_us-china-ai-reskilling-50s-60s.md)
 
 ## Logs
 - [Ingestion Log](logs/ingestion-log.md)

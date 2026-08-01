@@ -4,7 +4,7 @@ title: "Knowledge Map"
 description: "旧KarpathyWikiの主要テーマと導線を俯瞰する知識マップ。"
 status: active
 created: 2026-07-27
-updated: 2026-07-27
+updated: 2026-08-02
 tags:
   - map
   - karpathywiki
@@ -25,6 +25,7 @@ source: karpathywiki
 - [昭和AI台本パターン（歴史比喩でAI不安を翻訳する）](../topics/showa-ai/昭和AI台本パターン（歴史比喩でAI不安を翻訳する）.md)
 - [昭和世代に響くAI動画の特徴](../topics/showa-ai/昭和世代に響くAI動画の特徴.md)
 - [昭和世代向けAI導入の安心設計](../topics/showa-ai/昭和世代向けAI導入の安心設計.md)
+- [#05](../sources/2026-08-02_05_us-china-ai-reskilling-50s-60s.md)
 
 ### AIリサーチ
 - [AI YouTubeトレンド（グローバル・2026-07）](../topics/ai-research/AI YouTubeトレンド（グローバル・2026-07）.md)
